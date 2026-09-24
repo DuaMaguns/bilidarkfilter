@@ -216,6 +216,23 @@ bili-dark-filter-extension/
 
 ---
 
+## ☕ 请作者喝杯奶茶
+
+如果这个小工具帮你护住了眼睛、省下了时间，不妨请作者喝杯奶茶 🧋
+你的每一份支持，都是我继续维护和更新的动力 💪✨
+
+<div align="center">
+
+<img src="screenshots/donate-alipay.png" alt="支付宝赞赏码" width="240" />
+
+**支付宝扫码赞赏** · 金额随意，心意最重 ❤️
+
+</div>
+
+> 🙏 当然，白嫖也完全没问题！点个 ⭐ Star、提个 Issue、分享给同样熬夜看课的小伙伴，都是最好的鼓励～
+
+---
+
 <div align="center">
 
 **如果这个小工具帮到了你，欢迎点个 ⭐ Star 支持一下！**
