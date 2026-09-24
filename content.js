@@ -3,7 +3,7 @@
  * 作者: Dua  联系方式: https://duasweb.xyz
  *
  * 功能一：深色滤镜（chrome.storage.local 持久化，storage.onChanged 实时生效）
- * 功能二：视频倍速控制（仿 Global Speed 原理，直接控制 video.playbackRate）
+ * 功能二：视频倍速控制（直接控制 video.playbackRate）
  */
 (function () {
   'use strict';
@@ -52,7 +52,7 @@
   }
 
   /* =========================================================
-   * 二、倍速控制（仿 Global Speed 原理）
+   * 二、倍速控制
    * ---------------------------------------------------------
    * 核心：直接写 video.playbackRate；B 站播放器可能会重置速率，
    * 因此监听每个 video 的 ratechange 事件，把速率"钉"回目标值。
@@ -66,7 +66,7 @@
   let speedBeforeHold = 1; // 按住前的速度，用于松开时恢复
   let internalRateChange = false; // 标记是不是我们自己设置的速率，避免 ratechange 反复触发
 
-  /* ------- 倍速悬浮提示（OSD，仿 Global Speed 的小圆圈）------- */
+  /* ------- 倍速悬浮提示（OSD 小圆圈）------- */
   let osdEl = null; // 提示圆圈元素
   let osdHideTimer = null; // 淡出计时器
 
