@@ -10,6 +10,12 @@
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 ![Made with](https://img.shields.io/badge/made%20with-%E2%9D%A4%EF%B8%8F-red?style=flat-square)
 
+<br/>
+
+<img src="screenshots/cover-compare.jpg" alt="暗色模式效果对照" width="420" />
+
+_↑ 同一页白底 PPT：上为原始亮色，下为开启深色滤镜后的护眼效果_
+
 </div>
 
 ---
@@ -24,6 +30,24 @@
 📚 场景：晚上刷白底 PPT 课件、文档类录播时，刺眼白光变深色不伤眼 😌，还能用 `-` `=` 随手调速、按住 `→` 临时快进 🚀
 
 > 🧬 由一份 Tampermonkey 油猴脚本进化而来，现在是一个带界面、能实时切换、还能倍速的正经扩展啦！
+
+---
+
+## 📸 效果预览
+
+**白底课件 · 滤镜开关对照**（同一页 PPT）
+
+| ☀️ 滤镜关闭（原始亮色） | 🌙 滤镜开启（深色护眼） |
+|:---:|:---:|
+| <img src="screenshots/ppt-light.png" alt="滤镜关闭" width="380" /> | <img src="screenshots/ppt-dark.png" alt="滤镜开启" width="380" /> |
+
+**深浅画面对照**
+
+| 画面 A | 画面 B |
+|:---:|:---:|
+| <img src="screenshots/code-a.png" alt="画面 A" width="380" /> | <img src="screenshots/code-b.png" alt="画面 B" width="380" /> |
+
+> 💡 白底越多的画面（PPT、文档、代码），开启深色滤镜后的护眼提升越明显。
 
 ---
 
@@ -112,12 +136,13 @@ const DARK_FILTER = 'invert(85%) hue-rotate(190deg) saturate(1.1) contrast(100%)
 ```
 bili-dark-filter-extension/
 ├── 📄 manifest.json      # 扩展清单（MV3）
-├── 📜 content.js         # 注入页面的滤镜逻辑
+├── 📜 content.js         # 滤镜 + 倍速 + OSD 逻辑
 ├── 🖼️ popup.html         # 弹窗界面
 ├── ⚙️ popup.js           # 弹窗开关逻辑
 ├── 📖 README.md          # 就是你正在看的这份
 ├── 📝 LICENSE            # MIT 开源协议
-└── 📁 icons/             # 16 / 48 / 128 图标
+├── 📁 icons/             # 16 / 48 / 128 图标
+└── 📁 screenshots/       # 效果预览截图
 ```
 
 ---
