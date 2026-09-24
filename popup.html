@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>深色滤镜</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        width: 240px;
+        margin: 0;
+        padding: 16px;
+        font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+        background: #1e1f24;
+        color: #e8e8ea;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0 0 4px;
+        font-weight: 600;
+      }
+      .sub {
+        font-size: 12px;
+        color: #9a9aa2;
+        margin: 0 0 16px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .label {
+        font-size: 14px;
+      }
+      /* 开关样式 */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 46px;
+        height: 26px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background: #4a4a52;
+        transition: 0.25s;
+        border-radius: 26px;
+      }
+      .slider::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background: #fff;
+        transition: 0.25s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background: #4c8dff;
+      }
+      input:checked + .slider::before {
+        transform: translateX(20px);
+      }
+      .tip {
+        margin: 16px 0 0;
+        padding-top: 12px;
+        border-top: 1px solid #33343b;
+        font-size: 12px;
+        color: #8a8a92;
+        line-height: 1.6;
+      }
+      .section-title {
+        margin: 16px 0 8px;
+        padding-top: 12px;
+        border-top: 1px solid #33343b;
+        font-size: 13px;
+        font-weight: 600;
+        color: #c8c8d0;
+      }
+      .keys {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        color: #9a9aa2;
+      }
+      .keys li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 3px 0;
+      }
+      .keys .desc {
+        flex: 1;
+      }
+      kbd {
+        background: #33343b;
+        border-radius: 4px;
+        padding: 1px 6px;
+        font-family: monospace;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+      .footer {
+        margin-top: 12px;
+        font-size: 11px;
+        color: #6a6a72;
+      }
+      .footer a {
+        color: #4c8dff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>B站视频深色滤镜</h1>
+    <p class="sub">白底课件反色，护眼观看</p>
+    <div class="row">
+      <span class="label">启用滤镜</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <p class="tip">快捷键 <kbd>Alt</kbd> + <kbd>D</kbd> 可在页面内直接切换滤镜。</p>
+
+    <div class="section-title">⏩ 视频倍速快捷键</div>
+    <ul class="keys">
+      <li><kbd>-</kbd><span class="desc">减速（&gt;1 减 1，≤1 则减半，最低 0.125×）</span></li>
+      <li><kbd>=</kbd><span class="desc">加速（≥1 加 1，&lt;1 则翻倍，最高 16×）</span></li>
+      <li><kbd>\</kbd><span class="desc">在 1× 与上一次速度间切换</span></li>
+      <li><kbd>→</kbd><span class="desc">按住临时 2× 速度，松开恢复</span></li>
+    </ul>
+
+    <p class="footer">
+      作者 Dua · <a id="home" href="https://duasweb.xyz" target="_blank">duasweb.xyz</a>
+    </p>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+# 打包产物
+*.zip
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.log
+
+# 编辑器目录
+.vscode/
+.idea/
+
+# 临时预览
+_preview*.png
